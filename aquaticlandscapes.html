@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Aquatic Landscapes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00b4d8, #90e0ef);
+            color: #023047;
+        }
+        header {
+            background: #023047;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        main {
+            padding: 2em;
+            line-height: 1.6;
+        }
+        section {
+            margin-bottom: 2.5em;
+        }
+        footer {
+            background: #023047;
+            color: white;
+            text-align: center;
+            padding: 1.5em;
+        }
+        .form-container {
+            position: fixed;
+            top: 50%;
+            right: -100%;
+            transform: translateY(-50%);
+            width: 400px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 1.5em;
+            transition: right 0.5s ease-in-out;
+        }
+        .form-container.active {
+            right: 10px;
+        }
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        .close-button {
+            background: #e63946;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            padding: 0.3em 0.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .close-button:hover {
+            background: #d62828;
+        }
+        .form-button {
+            position: fixed;
+            top: 93%;
+            right: 10px;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            background: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .form-button:hover {
+            transform: scale(1.1);
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Discover the Wonders of Aquatic Landscapes</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Why Are Aquatic Landscapes Important?</h2>
+            <p>Aquatic landscapes are essential for life, supporting the planet's delicate balance. Oceans produce over half of the Earth's oxygen, while coral reefs act as biodiversity hotspots, housing millions of marine species. Wetlands and mangroves play vital roles in protecting coastal regions from floods and erosion.</p>
+        </section>
+
+        <section>
+            <h2>The Mesmerizing Diversity of Aquatic Life</h2>
+            <ul>
+                <li>Jellyfish have existed for over 500 million years—longer than dinosaurs!</li>
+                <li>Mangroves can thrive in salty water and turn it fresh through filtration.</li>
+                <li>Deep-sea anglerfish use built-in lights to navigate darkness and hunt.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Global Aquatic Treasures</h2>
+            <p>Explore remarkable aquatic landscapes around the world:</p>
+            <ul>
+                <li>Great Barrier Reef, Australia: The largest coral reef system visible from space.</li>
+                <li>Amazon River Basin: A freshwater treasure trove of unique species.</li>
+                <li>Mariana Trench: The deepest part of the ocean, shrouded in mystery.</li>
+            </ul>
+        </section>
+
+        <button class="form-button" onclick="toggleForm()">Give Feedback</button>
+
+        <div class="form-container" id="formContainer">
+            <div class="form-header">
+                <h2>Your Feedback</h2>
+                <button class="close-button" onclick="toggleForm()">&times;</button>
+            </div>
+            <p>Help us preserve aquatic wonders by filling out this form:</p>
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=s1hOlpMLFkGGPaIT3OQbv4SmChMjAoNIsKCFqT0V5u9UQ0ZMOFlFUlRQWkQ3RDQwNzVLOE1QSTJQMi4u&embed=true" allowfullscreen></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aquatic Wonders. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleForm() {
+            const formContainer = document.getElementById('formContainer');
+            formContainer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
